@@ -2,6 +2,23 @@ function clear() {
     localStorage.removeItem("form");
 }
 
+function load() {
+    let f = localStorage.getItem("form");
+    let j = JSON.parse(f);
+    if(!f) {
+        return;
+    }
+    for(let key of Object.keys(j)) {
+        if(j[key] === '✅') {
+            document.querySelector(`#${key}`).checked = true;
+        } else if(j[key] === '❌') {
+            document.querySelector(`#${key}`).checked = false;
+        } else {
+            document.querySelector(`#${key}`).value = j[key];
+        }
+    }
+}
+
 function submit() {
     localStorage.setItem("form", JSON.stringify(jsonify()));
     window.open("email.html", "_blank");
