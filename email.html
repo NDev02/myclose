@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="load.js"></script>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+        }
+        body {
+            margin: 1em auto;
+            width: 100%;
+            max-width: 800px;
+        }
+        h1 {
+            margin-bottom: 1em;
+        }
+        h3 {
+            margin-top: 0.5em;
+        }
+        h4 {
+            margin-top: 2em;
+        }
+        table {
+            width: 800px;
+            table-layout: fixed;
+            border: 1px solid black;
+            text-align: left;
+        }
+        table td, table th {
+            border: 1px solid black;
+        }
+        .closing {
+            font-size: 0.5em;
+        }
+        .b {
+            color: black;
+        }
+        .r {
+            color: red;
+        }
+        .g {
+            color: green;
+        }
+        .y {
+            color: yellow;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h3>Sales & Loyalty</h3>
+    <b>Sales: </b>$<span id="sales_completed"></span> of $<span id="sales_goal"></span>
+    <br/>
+    <b>Redcards: </b><span id="redcard_completed"></span> of <span id="redcard_goal"></span>
+
+    <h3>Fulfillment</h3>
+    <b>SFS: </b><span id="sfs_inf"></span>%
+    <br/>
+    <b>OPU: </b><span id="opu_inf"></span>% INF | <span id="opu_on_time"></span>% on time | <span id="opu_wait_time"></span> wait time
+
+    <h3>Salesfloor</h3>
+    <table cellspacing="0">
+        <tr>
+            <th>Area</th>
+            <th>Truck</th>
+            <th>Reshop</th>
+            <th>Zone</th>
+            <th>Focus</th>
+            <th>RFID</th>
+        </tr>
+        <tr>
+            <th>GM</th>
+            <td id="gm_truck"></td>
+            <td id="gm_reshop"></td>
+            <td id="gm_zone"></td>
+            <td id="gm_focus"></td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <th>Market</th>
+            <td id="market_truck"></td>
+            <td id="market_reshop"></td>
+            <td id="market_zone"></td>
+            <td id="market_focus"></td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <th>BCD + Rear</th>
+            <td id="bcdr_truck"></td>
+            <td id="bcdr_reshop"></td>
+            <td id="bcdr_zone"></td>
+            <td id="bcdr_focus"></td>
+            <td id="domestics_rfid"></td>
+        </tr>
+        <tr>
+            <th>Tech</th>
+            <td id="tech_truck"></td>
+            <td id="tech_reshop"></td>
+            <td id="tech_zone"></td>
+            <td id="tech_focus"></td>
+            <td id="tech_rfid"></td>
+        </tr>
+        <tr>
+            <th>Beauty</th>
+            <td id="beauty_truck"></td>
+            <td id="beauty_reshop"></td>
+            <td id="beauty_zone"></td>
+            <td id="beauty_focus"></td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <th>Style</th>
+            <td id="style_truck"></td>
+            <td id="style_reshop"></td>
+            <td id="style_zone"></td>
+            <td id="style_focus"></td>
+            <td id="style_rfid"></td>
+        </tr>
+    </table>
+
+    <h3>Operations</h3>
+    <b>Inbound Trailer: </b><span id="truck"></span> pieces
+    <br/>
+    <b>Pulled: </b><span id="ofo_completed"></span> DPCIs pulled, <span id="ofo_total"></span> DPCIs available | <span id="oos_total"></span> OOS DPCIs Remaining
+    <br/>
+    <b>Checkdates: </b><span id="checkdate_completed"></span> of <span id="checkdate_total"></span>
+    <br/>
+    <b>Audits: </b><span id="audit_completed"></span> of <span id="audit_total"></span>
+    <br/>
+    <b>Pricing: </b><span id="pricing_completed"></span> of <span id="pricing_total"></span>
+    <br/>
+    <b>Set: </b><span id="plano_completed"></span> of <span id="plano_total"></span>
+    <br/>
+    <b>PCV for 5pm: </b><span id="pcv"></span>
+
+    <h3>Attendance</h3>
+
+    <h3>Notes</h3>
+</body>
+</html>

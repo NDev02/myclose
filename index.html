@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyClose</title>
+    <style>
+        fieldset {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 0.5em;
+            margin-bottom: 1em;
+        }
+        textarea {
+            grid-column: 1/-1;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="titlebar">
+        <h1>MyClose</h1>
+    </div>
+    <div class="container">
+        <fieldset>
+            <legend>Sales & Loyalty</legend>
+            <label>Sales Completed</label>
+            <input type="text" id="sales_completed"/>
+            <label>Sales Goal</label>
+            <input type="text" id="sales_goal"/>
+            <label>Redcard Completed</label>
+            <input type="text" id="redcard_completed"/>
+            <label>Redcard Goal</label>
+            <input type="text" id="redcard_goal"/>
+        </fieldset>
+        <fieldset>
+            <legend>Ship From Store</legend>
+            <label>INF</label>
+            <input type="text" id="sfs_inf"/>
+            <label>Made 4:30</label>
+            <input type="checkbox" id="sfs_430"/>
+            <label>Ship on Time</label>
+            <input type="checkbox" id="sfs_ship_on_time"/>
+            <label>Close on Time</label>
+            <input type="checkbox" id="sfs_close"/>
+        </fieldset>
+        <fieldset>
+            <legend>Order Pick Up</legend>
+            <label>INF</label>
+            <input type="text" id="opu_inf"/>
+            <label>Pick on Time</label>
+            <input type="text" id="opu_on_time"/>
+            <label>Wait Time</label>
+            <input type="text" id="opu_wait_time"/>
+        </fieldset>
+        <fieldset>
+            <legend>General Merch</legend>
+            <label>Truck</label>
+            <input type="text" id="gm_truck"/>
+            <label>Reshop</label>
+            <input type="text" id="gm_reshop"/>
+            <label>Zone</label>
+            <select id="gm_zone">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+            <label>Zone Focus</label>
+            <textarea id="gm_focus"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Market</legend>
+            <label>Truck</label>
+            <input type="text" id="market_truck"/>
+            <label>Reshop</label>
+            <input type="text" id="market_reshop"/>
+            <label>Zone</label>
+            <select id="market_zone">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+            <label>Zone Focus</label>
+            <textarea id="market_focus"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Style</legend>
+            <label>Truck</label>
+            <input type="text" id="style_truck"/>
+            <label>Reshop</label>
+            <input type="text" id="style_reshop"/>
+            <label>Zone</label>
+            <select id="style_zone">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+            <label>Zone Focus</label>
+            <textarea id="style_focus"></textarea>
+            <label>RFID</label>
+            <input type="checkbox" id="style_rfid"/>
+        </fieldset>
+        <fieldset>
+            <legend>Beauty</legend>
+            <label>Truck</label>
+            <input type="text" id="beauty_truck"/>
+            <label>Reshop</label>
+            <input type="text" id="beauty_reshop"/>
+            <label>Zone</label>
+            <select id="beauty_zone">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+            <label>Zone Focus</label>
+            <textarea id="beauty_focus"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Tech</legend>
+            <label>Truck</label>
+            <input type="text" id="tech_truck"/>
+            <label>Reshop</label>
+            <input type="text" id="tech_reshop"/>
+            <label>Zone</label>
+            <select id="tech_zone">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+            <label>Zone Focus</label>
+            <textarea id="tech_focus"></textarea>
+            <label>RFID</label>
+            <input type="checkbox" id="tech_rfid"/>
+        </fieldset>
+        <fieldset>
+            <legend>BCD + Rear</legend>
+            <label>Truck</label>
+            <input type="text" id="bcdr_truck"/>
+            <label>Reshop</label>
+            <input type="text" id="bcdr_reshop"/>
+            <label>Zone</label>
+            <select id="bcdr_zone">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+            <label>Zone Focus</label>
+            <textarea id="bcdr_focus"></textarea>
+            <label>RFID</label>
+            <input type="checkbox" id="domestics_rfid"/>
+        </fieldset>
+        <fieldset>
+            <legend>Operations</legend>
+            <label>Truck</label>
+            <input type="text" id="truck">
+            <label>OFO Completed</label>
+            <input type="text" id="ofo_completed">
+            <label>OFO Total</label>
+            <input type="text" id="ofo_total">
+            <label>OOS Total</label>
+            <input type="text" id="oos_total">
+            <label>Checkdate Completed</label>
+            <input type="text" id="checkdate_completed">
+            <label>Checkdate Total</label>
+            <input type="text" id="checkdate_total">
+            <label>Audit Completed</label>
+            <input type="text" id="audit_completed">
+            <label>Audit Total</label>
+            <input type="text" id="audit_total">
+            <label>Pricing Completed</label>
+            <input type="text" id="pricing_completed">
+            <label>Pricing Total</label>
+            <input type="text" id="pricing_total">
+            <label>Plano Completed</label>
+            <input type="text" id="plano_completed">
+            <label>Plano Total</label>
+            <input type="text" id="plano_total">
+            <label>PCV done by 5pm</label>
+            <input type="checkbox" id="pcv"/>
+        </fieldset>
+        <fieldset>
+            <legend>Notes</legend>
+            <label>Attendance</label>
+            <textarea></textarea>
+            <label>Other</label>
+            <textarea></textarea>
+        </fieldset>
+    </div>
+    <button onclick="submit()">Submit</button>
+    <button onclick="clear()">Clear</button>
+</body>
+</html>
